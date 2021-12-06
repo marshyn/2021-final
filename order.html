@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<!-- all images were taken from "sunnysidecafesrq.com" -->
+<html lang="en">
+	<head>
+		<title>Sunny Cafe</title>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<!-- BELOW: Bootstrap without downloading by using a Content Delivery Network (CDN) -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+		 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+		 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+		 <!-- styling / css -->
+		<link rel="stylesheet" href="css/import_style.css"/>
+		<link rel="stylesheet" href="css/order_style.css"/>
+	</head>
+
+	<div id="disclaimer"></div>
+
+	<nav class="navbar navbar-inverse">
+	  <div class="container-fluid">
+	    <div class="navbar-header">
+	      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+	        <span class="icon-bar"></span>
+	        <span class="icon-bar"></span>
+	        <span class="icon-bar"></span>                        
+	      </button>
+	      <a class="navbar-brand" href="index.html"><img id="logo"></a>
+	    </div>
+
+	    <div class="collapse navbar-collapse" id="myNavbar">
+	      <ul class="nav navbar-nav">
+	        <li><a href="index.html">Home</a></li>
+	        <li><a href="menu.html">Menu</a></li>
+	        <li><a href="contact.html">Contact</a></li>
+	        <li><a href="about.html">About</a></li>
+	      </ul>
+	    </div>
+
+	  </div>
+	</nav>
+
+  <body>
+		<div class="container">    
+			<h1 class="text-center">Reservations and Online Ordering</h1>
+			<br \>
+
+			<div class="row">
+			  <div class="col-sm-12">
+			  	<h2>You can also make a reservation by calling us at 555-555-5555.</h2>
+			  </div>
+			</div>
+			<br \>
+
+        	<div class="row">
+			  <div class="col-sm-12">
+				<div class="radio">
+					<label>
+						<input type="radio" class="form-check-input" name="startReservation">Make a reservation
+					</label>
+				</div>
+
+				<div class="radio">
+					<label>
+						<input type="radio" class="form-check-input" name="startOrder">Place an online order for take-out/delivery
+					</label>
+				</div>
+				<br \>
+			  </div> <!-- close reserve/order radio buttons 12 (full) column -->
+			</div> <!-- close row -->
+
+		    <!-- breadcrumbs navigation -->
+
+		    <nav aria-label="breadcrumb navigation"> <!-- aria labels are essentially alt text -->
+	 		 <div class="d-none">
+			      <ol class="breadcrumb">
+			        <li class="breadcrumb-item"><a href="#order">Order</a></li>
+			        <li class="breadcrumb-item"><a href="#contact">Contact</a></li>
+			        <li class="breadcrumb-item"><a href="#time">Reservation Time</a></li>
+			        <li class="breadcrumb-item"><a href="#payment">Payment</a></li>
+			        <li class="breadcrumb-item"><a href="#summary">Summary</a></li>
+			      </ol>
+			 </div>
+		    </nav>
+
+
+		    	<!-- ALL OF THE FORMS-->
+		    	    <form action="#submitted" method="post">
+
+		    	    <!-------------- ROW 1: CONTACT INFO -------------->
+				      <div class="row"> <!-- contact info row (ALL) -->
+				        <div class="col-sm-6"> <!-- contact info: left side -->
+				          <div class="row"> <!-- name row -->
+				              <div class="col-sm-12"><h3 id="contact">Contact</h3></div>
+				              <div class="form-group col-sm-6">
+				                <label for="inputFirstName">First name</label>
+				                <input type="text" class="form-control" id="inputFirstName" required="required" placeholder="First name">
+				              </div>
+
+				                <div class="form-group col-sm-6">
+				                <label for="inputFirstName">Last name</label>
+				                  <input type="text" class="form-control" id="inputLastName" required="required" placeholder="Last name">
+				              </div> 
+				          </div> <!-- close name row -->
+
+				          <div class ="row"> <!-- email row -->
+				            <div class="form-group col-sm-12">
+				              <label for="emailInput">Email *</label>
+				              <input type="email" class="form-control" id="inputEmail" required="required" placeholder="name@example.com">
+				            </div>
+				          </div> <!-- close email row -->
+
+				          <div class="form-check">
+						    <input type="checkbox" class="form-check-input" id="newsletter" checked>
+						    <label class="form-check-label" for="newsletter">Sign me up for newsletter</label>
+						  </div>
+				        </div> <!-- close contact info: left side -->
+
+				        <div class="col-sm-6"> <!-- address info: right side -->
+				          <div class="row"> <!--  street 1 row -->
+				            <div class="col-sm-12" id="address"><h4>Address</h4></div>
+				            <div class="form-group col-sm-12">
+				              <label for="inputAddress">Street Address</label>
+				              <input type="text" class="form-control" id="inputAddress" required="required" placeholder="1234 Main Street">
+				            </div>
+				          </div> <!-- close street 1 row -->
+
+				          <div class="row"> <!--  street 2 row -->
+				            <div class="form-group col-sm-12">
+				              <label for="inputAddress2">Street Address 2</label>
+				              <input type="text" class="form-control" id="inputAddress2" placeholder="Apartment #, suite, floor, etc.">
+				            </div>
+				          </div> <!-- close street 2 row -->
+
+				          <div class="row"> <!--  city, state, ZIP row -->
+				                <div class="form-group col-sm-4"> <!-- city column -->
+				                  <label for="inputCity">City</label>
+				                  <input type="text" class="form-control" id="inputCity" required="required"> 
+				               </div> <!-- close city column -->
+
+				                <div class="form-group col-sm-4"> <!-- state  column -->
+				                  <label for="inputState">State</label>
+				                  <select id="inputState" class="form-control" disabled>
+				                    <option selected>Florida</option>
+				                    <option>Florida</option>
+				                  </select>
+				                </div> <!-- close state column -->
+
+				                <div class="form-group col-sm-2">
+				                  <label for="inputZip">Zip</label>
+				                  <input type="number" class="form-control" id="inputZip" required="required">
+				                </div>
+				          </div> <!-- close city, state, ZIP row -->
+				        </div> <!-- close address info: right side -->
+				      </div> <!-- close row #contact -->
+
+				      <!-------------- ROW 2: TIME -------------->
+				      <div class="row"> <!-- time/party row (ALL) -->
+				        <div class="col-sm-12"><h5 id="time">Reservation Details</h5></div>
+
+
+				        <div class="form-group col-sm-6"> <!-- time/date: left side -->
+				          <div class="row"> <!-- date selector row -->
+				            <label for="inputDate">Date </label><br \>
+				            <input type="date" id="inputDate" placeholder="mm/dd/yyyy">
+				          </div> <!-- close date selector row -->
+
+				          <div class="row"> <!-- time selector row -->
+				            <label for="inputTime">Time </label><br \>
+				            <input type="time" id="inputTime" value="13:00"> <!-- the value attribute puts in a time, so people know it's a time input (also it works in 24-hr for the value attr) -->
+				          </div> <!-- close time selector row -->
+				        </div> <!-- close time/date: left side -->
+
+				        <div class="form-group col-sm-6"> <!-- party: right side -->
+				          <div class="row">
+				          	<label for="inputPartySize">Party Size</label><br \>
+				            <select id="inputPartySize">
+				            	<option>1 Person</option>
+				            	<option>2 People</option>
+				            	<option>3 People</option>
+				            </select>
+				          </div> <!-- close party row: right side -->
+				        </div> <!-- close time/date: right side -->
+				      </div> <!-- close time/party row (ALL) -->
+
+				      <!-------------- ROW 3: PAYMENT (items) -------------->
+				      <div class="row"> <!-- payment items row (ALL) -->
+					        <div class="col-sm-6"> <!-- card info: left side -->
+					          <div class="row"> <!-- name row -->
+					          <div class="col-sm-12"><h6 id="payment">Payment</h6></div>
+
+					              <div class="form-group col-sm-12">
+					                <label for="inputFirstName">Card holder</label>
+					                <input type="text" class="form-control" id="inputFirstName" required="required" placeholder="Card holder name">
+					              </div>
+					          </div> <!-- close card holder name row -->
+
+					          <div class ="row"> <!-- card number row -->
+					            <div class="form-group col-sm-12">
+					              <label for="emailInput">Card number</label>
+					              <input type="number" class="form-control" id="inputEmail" required="required" placeholder="Enter card number">
+					            </div>
+					          </div> <!-- close card number row -->
+
+					          <div class="row"> <!-- card EXP and CVC row -->
+								<div class="form-group col-sm-12">
+									
+								</div>
+
+					          </div> <!-- close card EXP and CVC row -->
+					        </div> <!-- close card info: left side -->
+
+
+
+					        <div class="form-group col-sm-6"> <!-- address info: right side -->
+					        <div class="col-sm-12" id="billing"><h7>Billing Address</h7></div>
+					          <div class="row"> <!--  street 1 row -->
+					            <div class="form-group col-sm-12">
+					              <label for="inputAddress">Street Address</label>
+					              <input type="text" class="form-control" id="inputAddress" required="required" placeholder="1234 Main Street">
+					            </div>
+					          </div> <!-- close street 1 row -->
+
+					          <div class="row"> <!--  street 2 row -->
+					            <div class="form-group col-sm-12">
+					              <label for="inputAddress2">Street Address 2</label>
+					              <input type="text" class="form-control" id="inputAddress2" placeholder="Apartment #, suite, floor, etc.">
+					            </div>
+					          </div> <!-- close street 2 row -->
+
+					          <div class="row"> <!--  city, state, ZIP row -->
+					                <div class="form-group col-sm-4"> <!-- city column -->
+					                  <label for="inputCity">City</label>
+					                  <input type="text" class="form-control" id="inputCity" required="required"> 
+					               </div> <!-- close city column -->
+
+					                <div class="form-group col-sm-4"> <!-- state column -->
+					                  <label for="inputState">State</label>
+					                  <select id="inputState" class="form-control">
+										<option value="AL">Alabama</option>
+										<option value="AK">Alaska</option>
+										<option value="AZ">Arizona</option>
+										<option value="AR">Arkansas</option>
+										<option value="CA">California</option>
+										<option value="CO">Colorado</option>
+										<option value="CT">Connecticut</option>
+										<option value="DE">Delaware</option>
+										<option value="DC">District Of Columbia</option>
+										<option value="FL" selected>Florida</option>
+										<option value="GA">Georgia</option>
+										<option value="HI">Hawaii</option>
+										<option value="ID">Idaho</option>
+										<option value="IL">Illinois</option>
+										<option value="IN">Indiana</option>
+										<option value="IA">Iowa</option>
+										<option value="KS">Kansas</option>
+										<option value="KY">Kentucky</option>
+										<option value="LA">Louisiana</option>
+										<option value="ME">Maine</option>
+										<option value="MD">Maryland</option>
+										<option value="MA">Massachusetts</option>
+										<option value="MI">Michigan</option>
+										<option value="MN">Minnesota</option>
+										<option value="MS">Mississippi</option>
+										<option value="MO">Missouri</option>
+										<option value="MT">Montana</option>
+										<option value="NE">Nebraska</option>
+										<option value="NV">Nevada</option>
+										<option value="NH">New Hampshire</option>
+										<option value="NJ">New Jersey</option>
+										<option value="NM">New Mexico</option>
+										<option value="NY">New York</option>
+										<option value="NC">North Carolina</option>
+										<option value="ND">North Dakota</option>
+										<option value="OH">Ohio</option>
+										<option value="OK">Oklahoma</option>
+										<option value="OR">Oregon</option>
+										<option value="PA">Pennsylvania</option>
+										<option value="RI">Rhode Island</option>
+										<option value="SC">South Carolina</option>
+										<option value="SD">South Dakota</option>
+										<option value="TN">Tennessee</option>
+										<option value="TX">Texas</option>
+										<option value="UT">Utah</option>
+										<option value="VT">Vermont</option>
+										<option value="VA">Virginia</option>
+										<option value="WA">Washington</option>
+										<option value="WV">West Virginia</option>
+										<option value="WI">Wisconsin</option>
+										<option value="WY">Wyoming</option>
+					                  </select>
+					                </div> <!-- close state column -->
+
+					                <div class="form-group col-sm-2">
+					                  <label for="inputZip">Zip</label>
+					                  <input type="number" class="form-control" id="inputZip" required="required">
+					                </div>
+					          </div> <!-- close city, state, ZIP row -->
+					        </div> <!-- close address info: right side -->
+					      </div> <!-- close row #contact -->
+
+				      </div> <!-- close payment items row (ALL) -->
+
+			        <div class="col-sm-12 text-center" id="summary">
+						<button type="submit" id="submit" class="btn btn-primary" onclick="onClickSubmit()">Submit</button>
+			        </div>
+
+
+				    </form> <!-- close form -->
+
+		  </div> <!-- closes main container --> 
+
+  </body>
+
+	
+	<!-- JS / scripting -->
+	<script src="js/layout_script.js"></script>
+	<script src="js/submit_button_script.js"></script>
+	<script src="js/order_script.js"></script>
+
+
+	<footer class="container-fluid text-center footer-inverse">
+		<div class="row">
+			<div class="col-sm-4">
+				<img id="phone-icon" width="20px"><a href="tel:941-359-9500">941-359-9500</a>
+			</div>
+			<div class="col-sm-4">
+				<img id="facebook-icon-sq" width="20px"><a href="https://www.facebook.com/srqsunnyside/">srqsunnyside</a>
+			</div>
+			<div class="col-sm-4">
+				<img id="instagram-icon" width="20px"><a href="https://www.instagram.com/sunnysidesrq/">sunnysidesrq</a>
+			</div>
+		</div>
+	</footer>
+</html>
