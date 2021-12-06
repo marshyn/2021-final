@@ -1,0 +1,74 @@
+/* header styling */
+
+
+/* ----------------------------------------------------------------------------
+
+COLOR PALETTE
+
+MAIN - dark green
+#06501f     // main
+#467154     // lighten + muted (on hover)
+#00260D     // darken (active)
+
+
+SECONDARY - light green
+#C4DA42
+
+ACCENT - light orange-yellow
+#FDB649 
+
+SUN GRADIENT 1 - bright neon yellow
+#FFFD02
+
+SUN GRADIENT 2 - yellow-orange
+#FFA700
+
+FOOTER GRADIENT
+background-image: -moz-linear-gradient(rgb(217,61,64) 0%, rgb(196,217,64) 100%);
+background-image: -webkit-linear-gradient(rgb(217,61,64) 0%, rgb(196,217,64) 100%);
+background-image: -ms-linear-gradient(rgb(217,61,64) 0%, rgb(196,217,64) 100%);
+
+---------------------------------------------------------------------------- */
+
+/* override bootstrap: navbar styling */
+.navbar {
+  overflow: hidden;
+
+  border: none;
+  background-color: #06501f;
+
+  font-size: 1.3em;
+}
+
+/* override bootstrap: button/link text color */
+.navbar-inverse .navbar-nav > li > a {
+  color: #fff; /* text is white */
+}
+
+.navbar-inverse .navbar-nav > li > a:hover {
+  color: #C4DA42; /* text is light green on hover */
+}
+
+/* override bootstrap: header styling (where logo is) */
+.navbar-header {
+  min-height: 68px;
+}
+
+/* override bootstrap: hamburger button (navbar-toggle) styling */
+.navbar-inverse .navbar-collapse, .navbar-inverse .navbar-form {
+  border: none;
+}
+
+.navbar-inverse .navbar-toggle {
+  border-color: #00260D;
+}
+
+.navbar-inverse .navbar-toggle:focus, .navbar-inverse .navbar-toggle:hover {
+  background-color: #00260D;
+}
+
+
+/* headerNav styling END */
+
+
+
